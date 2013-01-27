@@ -170,8 +170,7 @@
  sql-electric-stuff nil
  sql-input-ring-file-name "~/.sql_history"
  sql-pop-to-buffer-after-send-region t
- transient-mark-mode -1
- user-full-name "David M. Boon"
+  user-full-name "David M. Boon"
  user-mail-address "david.boon@gmail.com"
   case-fold-search nil
  column-number-mode t

@@ -5,11 +5,9 @@
 
 (setq auto-mode-alist (cons '("\\.json" . javascript-mode) auto-mode-alist))
 
-
-(add-to-list 'load-path (*emacs ".emacs.x/.emacs.p/less-css-mode"))
-(eval-after-load 'js2-mode '(require 'less-css-mode))
-
 (require 'flymake)
+(add-to-list 'load-path (*emacs ".emacs.x/.emacs.p/less-css-mode"))
+(require 'less-css-mode)
 
 ;; (add-to-list 'flymake-allowed-file-name-masks '("\\.less$" flymake-php-init))
 ;; (add-to-list 'flymake-allowed-file-name-masks '("\\.install$" flymake-php-init))
