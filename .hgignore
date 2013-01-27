@@ -1,0 +1,5 @@
+syntax: glob
+*~
+.emacs.d/server/server
+syntax: regexp
+(.*/)?\#[^/]*\#$

@@ -1,0 +1,45 @@
+Announcing EFS 1.16 and Dired 7.9
+=================================
+
+This is to announce the release of EFS 1.16, a system for transparent
+file-transfer via ftp as well as Dired 7.9, a file manager that runs
+within Emacs.
+
+These are beta releases.
+
+It has been several years since the release EFS 1.15.  Most of the
+changes for 1.16 and 7.9 affect XEmacs support.  EFS has been part of
+XEmacs since XEmacs 19.15, and there is little need for users of a
+current version of XEmacs to install EFS 1.16 / Dired 7.9.
+
+As a result, EFS 1.16 / Dired 7.9 has only been tested *very* lightly
+under GNU Emacs for quite some time, and it is not clear how well it
+currently works.  Compatibility wasn't ever knowingly affected, but as
+these things go, your mileage may vary.  Hopefully, some knowledgeable
+users of GNU Emacs will give it a whirl and report problems and/or
+fixes for them back to the EFS lists.
+
+Other user-visible changes:
+
+- There is now Texinfo documentation for EFS.
+
+- User customization works via Per Abrahamsen's custom package.
+
+- EFS supports various ftp servers running under Windows NT.
+
+- Lots (and lots) of bug fixes.
+
+- Dired has been split off from the main EFS package; it is required
+  for running EFS.
+
+EFS 1.16 is available from
+http://hplbwww.hpl.hp.com/people/ange/efs/efs-1.16.tar.gz
+
+Dired 7.9 is available from
+http://hplbwww.hpl.hp.com/people/ange/efs/dired-7.9.tar.gz
+
+For the maintainers,
+
+Mike Sperber <sperber@informatik.uni-tuebingen.de>
+
+Enjoy!

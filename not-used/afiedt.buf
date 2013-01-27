@@ -1,0 +1,21 @@
+with
+ same_canonical_name as
+  (select company_id,
+     row_number() over (partition by canonical_name order by canonical_name) as rownumber,
+     count(*) over (partition by canonical_name order by canonical_name) as count_of_same
+    from t_company),
+ tickers as
+   (select a.company_id, m.base_attribute_id, m.name, m.value
+    from t_metadata m, t_attribute a
+      where a.base_attribute_id = m.base_attribute_id
+      and  a.attribute_id = (select attribute_id from t_attribute_config where attribute = 'security_id')
+      and m.name = 'Ticker')
+ select c.company_id, scn.rownumber, scn.count_of_same,
+    row_number() over (order by t.value nulls last) ticker_nulls_last,
+    row_number() over (order by c.canonical_name nulls last) canonical_name_nulls_last,     
+    value
+    from t_company c, tickers t, same_canonical_name scn
+      where c.company_id = t.company_id(+)
+      and c.company_id = scn.company_id
+  order by ticker_nulls_last, canonical_name desc
+/

@@ -1,0 +1,63 @@
+/* 
+ * call-ediff is used to call ediff from version control
+ * gcc -Wl,--subsystem,windows -o call-ediff3 call-ediff-emacsclient.c
+ */
+#include <stdio.h>
+#include <stdlib.h>
+
+void hackPathSeparator(char *windozePath) {
+    char *c;
+
+    for (c = windozePath; *c; c++) {
+	if ('\\' == *c)
+	    *c = '/';
+    }
+}
+
+int main(int argc, char *argv[], char *envp[]) {
+   char *yargv[7];
+   yargv[1] = "-e";
+   yargv[2] = argv[1];
+   yargv[3] = argv[2];
+   if (argc > 3) {
+      yargv[4] = argv[3];
+   }
+    
+
+    /* We get \ part separators from Perforce; hack these to / */
+
+    hackPathSeparator(yargv[2]);
+    hackPathSeparator(yargv[3]);
+    if (argc > 3) {
+       hackPathSeparator(yargv[4]);
+    }
+
+
+    //argv[1] = "";
+    //argv[1] = "-e";
+    
+    /* Sample usage: argv[2] = "(progn (message \"foo\") (raise-frame))"; */
+
+    //char *command = (char *)malloc(4096);
+    //use version that doesn't open a new frame
+    //emacsclient -e "(progn (ediff \"e:/home/.bash_profile\" \"e:/home/.dave_bash_profile\") (raise-frame))"
+    if (argc == 3) {
+       sprintf(yargv[5], "(progn (ediff \"%s\" \"%s\") (raise-frame))", yargv[2], yargv[3]);
+    }
+    else if (argc == 4) {
+       sprintf(yargv[5], "(progn (ediff-files3 \"%s\" \"%s\" \"%s\") (raise-frame))", yargv[2], yargv[3], yargv[4]);
+    }
+    else {
+       printf("unable to handle parameters < 2 or > 3, actual argc: %i", argc);
+    }
+
+    //sprintf(command, "(progn (make-frame-command) (ediff \"%s\" \"%s\") (raise-frame))", param1, param2);
+    printf("\n%s %s", yargv[1],  yargv[5]);
+    //yargv[4] = command;
+    //the  command arguments need to be terminated by a null pointer
+    yargv[6] = (char *)0;
+
+    //execvp("gnuclientw.exe", argv);
+    execvp("emacsclientw.exe", yargv);
+    return 0;
+}

@@ -1,0 +1,16 @@
+#
+#
+# tidyrc
+#
+#
+
+error-file:/tmp/tidy-errs
+quiet:yes
+indent:auto
+indent-spaces:2
+wrap:72
+output-encoding:utf8
+doctype:auto 
+input-xml:yes
+numeric-entities:no
+#preserve-entities:yes

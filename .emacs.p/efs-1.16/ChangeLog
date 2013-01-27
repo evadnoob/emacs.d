@@ -1,0 +1,55 @@
+1998-03-14  Michael Sperber [Mr. Preprocessor]  <sperber@informatik.uni-tuebingen.de>
+
+	* efs-dump.el: Pulled in necessary variables and autoloads. 
+
+	* dumped-lisp.el: Created.
+
+1998-03-13  Michael Sperber [Mr. Preprocessor]  <sperber@informatik.uni-tuebingen.de>
+
+	* fixup.el, Makefile: Added DIREDDIR and CUSTOMDIR for GNU Emacs
+ 	installation.
+
+	* efs-dired-mule.el: GNU Emacs compatibility fixes.
+
+	* auto-save.el, passwd.el: Required custom.  Various other GNU
+ 	Emacs compatibility fixes.
+
+	* efs-19.34.el: Created.
+
+	* efs-18.el, efs-19.el, efs-19.23.el: Added char-before.
+
+	* efs-ovwrt.el (efs-overwrite-fn): Reverted GNU-Emacs-compatible
+ 	code.
+
+	* INSTALL: Created.
+
+	* efs.texi: Various updates.
+
+	* efs.el: Added custom declarations.
+
+1998-02-17  Michael Sperber [Mr. Preprocessor]  <sperber@informatik.uni-tuebingen.de>
+
+	* efs.el (efs-write-region): Would recurse infinitely and thereby
+ 	break file-precious-flag.
+
+1998-02-17 Michael Sperber [Mr. Preprocessor]  <sperber@informatik.uni-tuebingen.de>
+
+	* efs-pc.el, efs.el: Added support for Microsoft's NT server.
+
+1998-01-05  Karl M. Hegbloom <karlheg@bittersweet.inetarena.com>
+
+	* efs-netrc.el: change char-equal to eq in two instances where nil
+ 	might arise.
+
+1997-12-12  Michael Sperber [Mr. Preprocessor]  <sperber@informatik.uni-tuebingen.de>
+
+	* efs-18.el, efs-19.23.el, efs-19.el, efs-l19.11.el: Overwrite
+ 	expand-file-name with version that uses file-name handlers.
+
+	* efs-pc.el: Added support for the Hummingbird ftpd
+
+	* ChangeLog: created
+
+1997-12-12  Alastair Burt <alastair.burt@dfki.de>
+
+	* efs-dired.el: EFS now confirms overwrites.

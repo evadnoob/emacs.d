@@ -1,0 +1,15 @@
+<locatingRules xmlns="http://thaiopensource.com/ns/locating-rules/1.0">
+  <transformURI fromPattern="*.xml" toPattern="*.rnc"/>
+  <uri pattern="*.fo"  typeId="FO"/>
+  <uri pattern="pom.xml" typeId="POM"/>
+
+  <namespace ns="http://www.w3.org/1999/XSL/Format" typeId="FO"/>
+  <namespace ns="http://maven.apache.org/POM/4.0.0" typeId="POM"/>
+
+  <documentElement localName="root" typeId="FO"/>
+  <documentElement prefix="fo" typeId="FO"/>
+  <documentElement localName="project" typeId="POM"/>
+
+  <typeId id="FO" uri="xslfo/main.rnc"/>
+  <typeId id="POM" uri="file:///c:/Documents and Settings/u0103223/.emacs.p/schemas/pom.rnc"/>
+</locatingRules>

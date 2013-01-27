@@ -1,0 +1,102 @@
+Installation Instructions
+=========================
+
+NOTE: These instructions only apply if you're *not* installing EFS as an
+      XEmacs package.
+
+      If you *are* indeed installing EFS as an XEmacs package, follow
+      the generic instructions for source packages.  Believe it or
+      not, they work.
+
+OK, I'll assume if you're reading this, you're *not* installing EFS as
+an XEmacs package.
+
+NOTE: EFS 1.16 requires Dired 7.9 for proper operation.  Get it from
+      the same place as EFS itself.
+
+ANOTHER NOTE: You must have Per Abrahamsen's custom package installed
+              to install EFS. It comes with more recent versions of
+              XEmacs and Emacs.
+
+              If you absolutely need to, get it from
+
+              http://www.dina.kvl.dk/~abraham/custom/
+
+
+1. Edit the configuration variables in Makefile below.
+   EMACS should be the name of the emacs program on your system.
+   EMACS_VERSION should be the emacs version. This must be one of:
+     18     for all versions of Emacs 18.
+     19     for all versions of the original GNU Emacs from FSF between
+            19.1 and 19.22, inclusive.
+     19.23  for version 19.23 and later of the original GNU Emacs from FSF
+     l19.11 for XEmacs 19.11 trhu 19.14
+     x19.15 for XEmacs 19.15
+     x20    for XEmacs 20.1 and later
+   LISPDIR should be the directory in which you want the .elc
+     files installed.
+   BDIR should be the directory containing the .elc files for the
+     byte-compiler.  Although efs byte-compiles and works with the
+     Emacs V18 byte-compiler, it is strongly recommended to use
+     Jamie Zawinski's V19 byte-compiler. This byte-compiler is
+     standard with Lucid Emacs, XEmacs, and GNU Emacs V19, so in this
+     case you can set BDIR to nothing.
+   INFODIR should be the directory where you want the Texinfo
+   documentation to go.
+   DIREDDIR should be set to the directory containing the .elc files for
+     Dired.  Be sure to have a version later than 7.9.
+   VMDIR should be set to the directory containing the .elc files for
+     VM. If you aren't using VM, then set this to nothing.
+   CUSTOMDIR should be set to the directory containing the .elc files for
+     custom. If your Emacs comes with custom, ignore this option.
+
+2. To byte-compile the entire package, except for VM support (efs-vm.el),
+   run
+
+      make EMACS_VERSION
+
+   where EMACS_VERSION is the emacs version that you are
+   compiling for.  It must be one of:
+
+   18     for Emacs 18
+   19     for the original GNU Emacs from FSF, versions 19.1 through
+            19.22, inclusive
+   19.23  for the original GNU Emacs from FSF, version 19.23 and later.
+   l19.11 for Lucid XEmacs 19.11 thru 19.14
+   x19.15 for XEmacs 19.15
+   x20    for XEmacs 20.1 and later
+
+   If you have set the EMACS_VERSION variable correctly, then typing just    
+
+   make
+
+   will suffice.
+
+3. To byte-compile everything, including VM support, run
+
+   make all
+
+4. To byte-compile all the efs files, except for VM support,
+   run
+
+   make efs
+
+5. To byte-compile only the core efs files run
+
+   make core
+
+6. To byte compile an efs-XXX.el file, run
+
+   make XXX.
+
+   This means that VM support can be compiled by running make vm.
+
+7. To byte-compile only efs-auto.el, for autoloading efs, run
+
+   make auto
+
+8. To install the compiled Lisp files and the info pages, run
+
+   make install_elc
+
+9. After loading, configure EFS via M-x customize RET efs

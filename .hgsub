@@ -1,0 +1,11 @@
+.emacs.p/js3-mode = [git]https://github.com/thomblake/js3-mode.git
+.emacs.p/js2-mode = [git]https://github.com/mooz/js2-mode.git
+.emacs.p/emacs-jabber = [git]https://github.com/legoscia/emacs-jabber.git
+.emacs.p/helm = [git]https://github.com/emacs-helm/helm.git
+.emacs.p/expand-region.el = [git]https://github.com/magnars/expand-region.el.git
+.emacs.p/yasnippet = [git]https://github.com/capitaomorte/yasnippet.git
+.emacs.p/less-css-mode = [git]https://github.com/purcell/less-css-mode.git
+.emacs.p/slime = [git]https://github.com/antifuchs/slime.git
+.emacs.p/swank-js = [git]https://github.com/swank-js/swank-js.git 
+.emacs.p/mark-multiple.el = [git]https://github.com/magnars/mark-multiple.el.git
+.emacs.p/change-inner.el = [git]https://github.com/magnars/change-inner.el.git

@@ -1,0 +1,1 @@
+(setq explicit-bash-args '("--login" "-i")) 

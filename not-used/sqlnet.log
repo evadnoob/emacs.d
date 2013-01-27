@@ -1,0 +1,74 @@
+
+
+***********************************************************************
+Fatal NI connect error 12514, connecting to:
+ (DESCRIPTION=(ADDRESS=(PROTOCOL=TCP)(HOST=U0103223-XPA.TLR.Thomson.Com)(PORT=1521))(CONNECT_DATA=(SERVICE_NAME=WCA)(CID=(PROGRAM=f:\oracle10.2.0\db_1\bin\sqlplus.exe)(HOST=U0103223-XPA)(USER=U0103223))))
+
+  VERSION INFORMATION:
+	TNS for 32-bit Windows: Version 10.2.0.1.0 - Production
+	Windows NT TCP/IP NT Protocol Adapter for 32-bit Windows: Version 10.2.0.1.0 - Production
+  Time: 01-APR-2008 20:43:14
+  Tracing not turned on.
+  Tns error struct:
+    ns main err code: 12564
+    TNS-12564: TNS:connection refused
+    ns secondary err code: 0
+    nt main err code: 0
+    nt secondary err code: 0
+    nt OS err code: 0
+
+
+***********************************************************************
+Fatal NI connect error 12514, connecting to:
+ (DESCRIPTION=(ADDRESS=(PROTOCOL=TCP)(HOST=fairport.int.westgroup.com)(PORT=1521))(CONNECT_DATA=(SERVER=DEDICATED)(SERVICE_NAME=ORu183a)(CID=(PROGRAM=f:\oracle10.2.0\db_1\bin\sqlplus.exe)(HOST=U0103223-XPA)(USER=u0103223))))
+
+  VERSION INFORMATION:
+	TNS for 32-bit Windows: Version 10.2.0.3.0 - Production
+	Windows NT TCP/IP NT Protocol Adapter for 32-bit Windows: Version 10.2.0.3.0 - Production
+  Time: 26-JUN-2008 22:24:53
+  Tracing not turned on.
+  Tns error struct:
+    ns main err code: 12564
+    TNS-12564: TNS:connection refused
+    ns secondary err code: 0
+    nt main err code: 0
+    nt secondary err code: 0
+    nt OS err code: 0
+
+
+***********************************************************************
+Fatal NI connect error 12514, connecting to:
+ (DESCRIPTION=(ADDRESS=(PROTOCOL=TCP)(HOST=fairport.int.westgroup.com)(PORT=1521))(CONNECT_DATA=(SERVER=DEDICATED)(SERVICE_NAME=ORU184A.int.westgroup.com)(CID=(PROGRAM=f:\oracle\product\10.2.0\db_1\bin\sqlplus.exe)(HOST=U0103223-XPA)(USER=U0103223))))
+
+  VERSION INFORMATION:
+	TNS for 32-bit Windows: Version 10.2.0.4.0 - Production
+	Windows NT TCP/IP NT Protocol Adapter for 32-bit Windows: Version 10.2.0.4.0 - Production
+  Time: 08-JUL-2008 12:53:15
+  Tracing not turned on.
+  Tns error struct:
+    ns main err code: 12564
+    TNS-12564: TNS:connection refused
+    ns secondary err code: 0
+    nt main err code: 0
+    nt secondary err code: 0
+    nt OS err code: 0
+
+
+***********************************************************************
+Fatal NI connect error 12560, connecting to:
+ (DESCRIPTION=(ADDRESS=(PROTOCOL=BEQ)(PROGRAM=oracle)(ARGV0=oracleWCA)(ARGS='(DESCRIPTION=(LOCAL=YES)(ADDRESS=(PROTOCOL=beq)))'))(CONNECT_DATA=(SID=WCA)(CID=(PROGRAM=f:\oracle\product\10.2.0\db_1\bin\sqlplus.exe)(HOST=U0103223-XPA)(USER=u0103223))))
+
+  VERSION INFORMATION:
+	TNS for 32-bit Windows: Version 10.2.0.4.0 - Production
+	Oracle Bequeath NT Protocol Adapter for 32-bit Windows: Version 10.2.0.4.0 - Production
+	Windows NT TCP/IP NT Protocol Adapter for 32-bit Windows: Version 10.2.0.4.0 - Production
+  Time: 05-SEP-2008 08:09:05
+  Tracing not turned on.
+  Tns error struct:
+    ns main err code: 12560
+    TNS-12560: TNS:protocol adapter error
+    ns secondary err code: 0
+    nt main err code: 530
+    TNS-00530: Protocol adapter error
+    nt secondary err code: 2
+    nt OS err code: 0

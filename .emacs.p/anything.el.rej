@@ -1,0 +1,120 @@
+***************
+*** 280,286 ****
+    If present matches from the source are shown only if the
+    pattern is not empty. Optionally, it can have an integer
+    parameter specifying the required length of input which is
+-   useful in case of sources with lots of candidates.")
+  
+  
+  ;; This value is only provided as an example. Customize it to your own
+--- 280,290 ----
+    If present matches from the source are shown only if the
+    pattern is not empty. Optionally, it can have an integer
+    parameter specifying the required length of input which is
++   useful in case of sources with lots of candidates.
++ 
++ - multiline (optional)
++ 
++   TODO document")
+  
+  
+  ;; This value is only provided as an example. Customize it to your own
+***************
+*** 867,873 ****
+                  source)))
+            anything-sources))
+  
+- 
+  (defun anything-process-source (source)
+    "Display matches from SOURCE according to its settings."
+    (let (matches)
+--- 874,879 ----
+                  source)))
+            anything-sources))
+  
+  (defun anything-process-source (source)
+    "Display matches from SOURCE according to its settings."
+    (let (matches)
+***************
+*** 917,944 ****
+      (when matches
+        (anything-insert-header (assoc-default 'name source))
+  
+-       (dolist (match matches)
+-         (when (and anything-enable-digit-shortcuts
+-                    (not (eq anything-digit-shortcut-count 9)))
+-           (move-overlay (nth anything-digit-shortcut-count
+-                              anything-digit-overlays)
+-                         (line-beginning-position)
+-                         (line-beginning-position))
+-           (incf anything-digit-shortcut-count))
+- 
+-         (anything-insert-match match 'insert)))))
+  
+  
+  (defun anything-insert-match (match insert-function)
+    "Insert MATCH into the anything buffer. If MATCH is a list then
+  insert the string inteneded to appear on the display and store
+  the real value in a text property."
+-   (if (not (listp match))
+-       (funcall insert-function match)
+- 
+-     (funcall insert-function (car match))
+-     (put-text-property (line-beginning-position) (line-end-position) 
+-                        'anything-realvalue (cdr match)))
+    (funcall insert-function "\n"))
+  
+  
+--- 923,956 ----
+      (when matches
+        (anything-insert-header (assoc-default 'name source))
+  
++       (let (tail
++             (multiline (assoc 'multiline source)))
++         (dolist (match matches)
++           (when (and anything-enable-digit-shortcuts
++                      (not (eq anything-digit-shortcut-count 9)))
++             (move-overlay (nth anything-digit-shortcut-count
++                                anything-digit-overlays)
++                           (line-beginning-position)
++                           (line-beginning-position))
++             (incf anything-digit-shortcut-count))
++           
++           (if (and tail multiline)
++               (anything-insert-candidate-separator)
++             (setq tail t))
++           
++           (anything-insert-match match 'insert))))))
+  
+  
+  (defun anything-insert-match (match insert-function)
+    "Insert MATCH into the anything buffer. If MATCH is a list then
+  insert the string inteneded to appear on the display and store
+  the real value in a text property."
++   (let ((start (line-beginning-position (point)))
++         (string (if (listp match) (car match) match))
++         (realvalue (if (listp match) (cdr match) match)))
++     (funcall insert-function string)
++     (put-text-property start (line-end-position)
++                        'anything-realvalue realvalue))
+    (funcall insert-function "\n"))
+  
+  
+***************
+*** 1701,1707 ****
+  
+          (t (error "Invalid unit.")))
+  
+-       (while (anything-pos-header-line-p)
+          (forward-line (if (and (eq direction 'previous)
+                                 (not (eq (line-beginning-position)
+                                          (point-min))))
+--- 1731,1738 ----
+  
+          (t (error "Invalid unit.")))
+  
++       (while (or (anything-pos-header-line-p)
++                  (anything-pos-candidate-separator-p))
+          (forward-line (if (and (eq direction 'previous)
+                                 (not (eq (line-beginning-position)
+                                          (point-min))))

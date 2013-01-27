@@ -1,0 +1,19 @@
+;; Object packages/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "packages/"
+  :tables (list 
+   (semanticdb-table "color-theme.el"
+    :major-mode 'emacs-lisp-mode
+    :tags 'nil
+    :file "color-theme.el"
+    )
+   (semanticdb-table "sgml-mode.el"
+    :major-mode 'emacs-lisp-mode
+    :tags 'nil
+    :file "sgml-mode.el"
+    )
+   )
+  :file "semantic.cache"
+  :semantic-tag-version "2.0beta3"
+  :semanticdb-version "2.0beta3"
+  )

@@ -1,0 +1,57 @@
+--- pom-parser-orig.el	2008-03-12 21:42:24.359375000 -0400
++++ pom-parser.el	2008-03-12 22:00:12.906250000 -0400
+@@ -115,8 +115,7 @@
+         (cdr cached-pom-data)
+       (message "Calling %s help:effective-pom dependency:build-classpath..."
+                pom-maven-command)
+-      (let ((temp-pom (make-temp-file temporary-file-directory))
+-            (temp-cpfile (make-temp-file temporary-file-directory)))
++      (let ((temp-pom (make-temp-file (concat temporary-file-directory  "pom.") nil ".xml")))
+         (with-current-buffer *mvn-output-buffer*
+           (erase-buffer))
+         (if (> (let ((default-directory (file-name-directory pom-file)))
+@@ -127,23 +126,39 @@
+                                "dependency:build-classpath"
+                                (concat "-Doutput=" temp-pom)
+                                "-DincludeScope=compile"
+-                               "-DincludeTypes=jar"
+-                               (concat "-Dmaven.dep.cpFile=" temp-cpfile)))
++                               "-DincludeTypes=jar" ))
+                0)
+             (progn (display-buffer *mvn-output-buffer* t)
+                    (error "%s call failed" pom-maven-command))
+           (let ((pom (pom-parse-pom-file temp-pom)))
+-            (if (null pom)
++            (message "length pom: %s" (length pom))
++            (if (or (null pom) (= 0 (length pom )))
+                 (error "Failed to parse effective POM; the contents of %s might help diagnose" temp-pom)
+-              (let ((classpath (pom-parse-classpath-file temp-cpfile)))
++              (let ((classpath (pom-parse-classpath-buffer)))
++                (message "classpath: %s" classpath)
+                 (push (cons 'pom:classpath classpath)
+                       (nth 1 pom)))
+               (puthash pom-file (cons pom-file-last-mod-time pom)
+                        *pom-cache*)
+               (delete-file temp-pom)
+-              (delete-file temp-cpfile)
+               pom)))))))
+ 
++(defun pom-parse-classpath-buffer ()
++  ""
++  ;;(display-buffer *mvn-output-buffer*)
++  (with-current-buffer *mvn-output-buffer* 
++    (goto-char (point-min))
++    (let ((line-before-classpath (search-forward "Dependencies classpath:" nil t)))
++      (message "line-before-classpath: %s" line-before-classpath )
++      (if line-before-classpath
++          (progn 
++            (forward-line)
++            ;;buffer-substring
++            ;;(message "point-bol: %s point-eol: %s" (point-at-bol) (point-at-eol))
++            (let ((tmp-classpath (buffer-substring-no-properties (point-at-bol) (point-at-eol))))
++              (split-string tmp-classpath path-separator)))
++        (error "failed to find classpath in mvn dependency:build-classpath output")))))
++
+ (defun pom-parse-classpath-file (classpath-file)
+   (with-temp-buffer
+     (insert "(\"")

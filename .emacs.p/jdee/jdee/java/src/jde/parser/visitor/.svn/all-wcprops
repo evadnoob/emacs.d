@@ -1,0 +1,47 @@
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svnroot/jdee/!svn/ver/200/trunk/jdee/java/src/jde/parser/visitor
+END
+Visitor.java
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svnroot/jdee/!svn/ver/200/trunk/jdee/java/src/jde/parser/visitor/Visitor.java
+END
+TreeFormatter.java
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svnroot/jdee/!svn/ver/200/trunk/jdee/java/src/jde/parser/visitor/TreeFormatter.java
+END
+GetVariables.java
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svnroot/jdee/!svn/ver/200/trunk/jdee/java/src/jde/parser/visitor/GetVariables.java
+END
+GetVariablesVisitor.java
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svnroot/jdee/!svn/ver/200/trunk/jdee/java/src/jde/parser/visitor/GetVariablesVisitor.java
+END
+DepthFirstVisitor.java
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svnroot/jdee/!svn/ver/200/trunk/jdee/java/src/jde/parser/visitor/DepthFirstVisitor.java
+END
+TreeDumper.java
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svnroot/jdee/!svn/ver/200/trunk/jdee/java/src/jde/parser/visitor/TreeDumper.java
+END
+Makefile
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svnroot/jdee/!svn/ver/200/trunk/jdee/java/src/jde/parser/visitor/Makefile
+END

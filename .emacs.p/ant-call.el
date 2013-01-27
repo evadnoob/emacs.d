@@ -1,0 +1,30 @@
+(global-set-key [f5] 'ant-call)
+
+(defun ant-call (target)
+  "Call Ant's build.xml"
+  (interactive "MAnt Target:")
+  (let ((oldbuf (get-buffer "*ant-compilation*")))
+    (if (not (null oldbuf))
+	(kill-buffer "*ant-compilation*")))
+  (let* ((buildfile (file-search-upward (file-name-directory (buffer-file-name)) "build.xml"))
+	 (outbuf (get-buffer-create "*ant-compilation*"))
+	 (curbuf (current-buffer))
+	 )
+    (switch-to-buffer-other-window outbuf)
+    (insert "#> ant -f " buildfile " " target "\n")
+    (switch-to-buffer-other-window curbuf)
+    (call-process "ant" nil outbuf t "-f" buildfile target)
+    ))
+
+(defun file-search-upward (directory file)
+  "search a file upward"
+  (let* ((updir (file-truename (concat (file-name-directory directory) "../")))
+	 (curfd   (if (not (string= (substring directory (- (length directory) 1)) "/"))
+		      (concat directory "/" file)
+		    (concat directory file))))
+    (if (file-exists-p curfd)
+	curfd
+      (if (and (not (string= (file-truename directory) updir))
+	       (< (length updir) (length (file-truename directory))))
+	  (file-search-upward updir file)
+	nil))))

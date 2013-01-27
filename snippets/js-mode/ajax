@@ -1,0 +1,23 @@
+# -*- coding: utf-8; mode: snippet -*-
+# name: ajax xhr call
+# key: $ajax
+# group: jquery
+# contributor: David Boon <david.boon@gmail.com>
+# --
+$.ajax({
+   type: "GET",
+   url: '',
+   dataType: "JSON",
+   success: function(data, code, jqXHR) {
+             
+       
+     );
+   },
+   error: function(jqXHR, errType, error) {
+     that.trigger('busy:stop');
+     application.log('error', jqXHR);
+     application.trigger("system.error", {response: jqXHR });
+   }
+});
+
+

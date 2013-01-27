@@ -1,0 +1,26 @@
+There are several mailing lists relevant to efs.  If you wish to join
+a list, send e-mail to their -request address.
+
+  efs-bugs@cuckoo.hpl.hp.com
+
+This is where all bug reports should go.  M-x efs-report-bug is the
+recommended way of sending bug reports about efs, and this will send by
+default to this address.
+
+  efs-help@cuckoo.hpl.hp.com
+
+This is where general discussions about efs should go.  For beta-testing
+discussions, use efs-testers instead.
+
+  efs-testers@cuckoo.hpl.hp.com
+
+This is where discussions about beta testing efs should go.  Bugs should
+however be reported to efs-bugs. Patches for beta test bugs will be
+sent to this list.
+
+  efs-announce@cuckoo.hpl.hp.com
+
+This is where announcements such as new generally available releases of efs
+should go.
+
+Each of the lists have a -request address to join and leave the list.

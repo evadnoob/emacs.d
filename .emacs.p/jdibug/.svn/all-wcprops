@@ -1,0 +1,71 @@
+K 25
+svn:wc:ra_dav:version-url
+V 23
+/svn/!svn/ver/166/trunk
+END
+tree-mode.el
+K 25
+svn:wc:ra_dav:version-url
+V 35
+/svn/!svn/ver/91/trunk/tree-mode.el
+END
+tree-widget-dynamic.el
+K 25
+svn:wc:ra_dav:version-url
+V 45
+/svn/!svn/ver/26/trunk/tree-widget-dynamic.el
+END
+ado.el
+K 25
+svn:wc:ra_dav:version-url
+V 29
+/svn/!svn/ver/56/trunk/ado.el
+END
+jdibug.el
+K 25
+svn:wc:ra_dav:version-url
+V 33
+/svn/!svn/ver/156/trunk/jdibug.el
+END
+jdwp.el
+K 25
+svn:wc:ra_dav:version-url
+V 31
+/svn/!svn/ver/163/trunk/jdwp.el
+END
+elog.el
+K 25
+svn:wc:ra_dav:version-url
+V 29
+/svn/!svn/ver/2/trunk/elog.el
+END
+jdi.el
+K 25
+svn:wc:ra_dav:version-url
+V 30
+/svn/!svn/ver/166/trunk/jdi.el
+END
+jdibug.html
+K 25
+svn:wc:ra_dav:version-url
+V 35
+/svn/!svn/ver/152/trunk/jdibug.html
+END
+jdibug.texi
+K 25
+svn:wc:ra_dav:version-url
+V 35
+/svn/!svn/ver/148/trunk/jdibug.texi
+END
+NEWS
+K 25
+svn:wc:ra_dav:version-url
+V 28
+/svn/!svn/ver/165/trunk/NEWS
+END
+Makefile
+K 25
+svn:wc:ra_dav:version-url
+V 32
+/svn/!svn/ver/152/trunk/Makefile
+END

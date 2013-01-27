@@ -1,0 +1,47 @@
+K 25
+svn:wc:ra_dav:version-url
+V 46
+/svnroot/jdee/!svn/ver/233/trunk/jdee/java/lib
+END
+LICENSE.checkstyle
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svnroot/jdee/!svn/ver/200/trunk/jdee/java/lib/LICENSE.checkstyle
+END
+RIGHTS.antlr
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svnroot/jdee/!svn/ver/200/trunk/jdee/java/lib/RIGHTS.antlr
+END
+checkstyle-all.jar
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svnroot/jdee/!svn/ver/200/trunk/jdee/java/lib/checkstyle-all.jar
+END
+LICENSE.apache
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svnroot/jdee/!svn/ver/200/trunk/jdee/java/lib/LICENSE.apache
+END
+junit.jar
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svnroot/jdee/!svn/ver/200/trunk/jdee/java/lib/junit.jar
+END
+sun_checks.xml
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svnroot/jdee/!svn/ver/200/trunk/jdee/java/lib/sun_checks.xml
+END
+bsh.jar
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svnroot/jdee/!svn/ver/200/trunk/jdee/java/lib/bsh.jar
+END
