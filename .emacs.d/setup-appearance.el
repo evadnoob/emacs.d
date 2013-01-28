@@ -37,8 +37,6 @@
 
 ;;(add-hook 'before-make-frame-hook 'turn-off-tool-bar)
 
-(global-hl-line-mode 1)
-
 ;;
 ;; define some faces to use:
 ;;
@@ -171,9 +169,13 @@
       ;;(load-library "color-theme-sunburst")
       ;;(color-theme-sunburst)
       
-      (load-library "color-theme--dmb-default3")
-      (color-theme--dmb-default3)
-      ))
+      ;;(load-library "color-theme--dmb-default3")
+      ;;(color-theme--dmb-default3)
+
+      (load-library "color-theme-jadedragon-660650")
+      (color-theme-jadedragon-660650)
+      (custom-set-faces 
+       ))
 
 
 ;;(load-library "color-theme-twilight")
@@ -183,10 +185,14 @@
 ;;(color-theme-zenburn)
 
 
+
+(global-hl-line-mode -1)
+
 ;; Customize background color of lighlighted line
 ;;(set-face-background 'hl-line "#FFE3AB")
 ;;(set-face-background 'hl-line "#D85652")
-(set-face-background 'hl-line "#CDE1FF")
+;;(set-face-background 'hl-line "#CDE1FF")
+;;(set-face-foreground  'hl-line "#000000")
 
 ;; Highlight in yasnippet
 ;;(set-face-background 'yas/field-highlight-face "#333399")
