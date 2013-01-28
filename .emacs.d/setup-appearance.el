@@ -174,7 +174,9 @@
 
       (load-library "color-theme-jadedragon-660650")
       (color-theme-jadedragon-660650)
-      (custom-set-faces 
+      
+      ;;(load-library "emacs-soothe-theme")
+      ;;(color-theme-emacs-soothe)
        ))
 
 
