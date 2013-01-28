@@ -22,6 +22,7 @@
 ;; Reminder to self: replacing dmb-main with more modular setup
 ;; files...(load-library "dmb-main.el") (load-library "dmb-var.el")
 (load-library "setup-sensible-defaults")
+(load-library "setup-transparency")
 (load-library "setup-appearance")
 (load-library "setup-grep")
 (load-library "setup-org-mode")
@@ -37,7 +38,7 @@
 (load-library "setup-server")
 (load-library "setup-ido")
 (load-library "setup-change-inner")
-(load-library "setup-transparency")
+
 
 ;;brew install emacs --cocoa
 ;;brew install emacs --cocoa --use-git-head --HEAD

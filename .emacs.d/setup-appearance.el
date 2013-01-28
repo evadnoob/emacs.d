@@ -175,8 +175,10 @@
       (load-library "color-theme-jadedragon-660650")
       (color-theme-jadedragon-660650)
       
-      ;;(load-library "emacs-soothe-theme")
-      ;;(color-theme-emacs-soothe)
+      (transparency-on)
+      (add-to-list 'load-path (*emacs ".emacs.x/.emacs.p/emacs-soothe-theme"))
+      (load-library "soothe-theme")
+      ;;(color-theme-soothe)
        ))
 
 

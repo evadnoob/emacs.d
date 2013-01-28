@@ -8,4 +8,4 @@
 (require 'expand-region)
 (global-set-key (kbd "C-=") 'er/expand-region)
 
-(require 'setup-change-inner)
+(provide 'setup-change-inner)
