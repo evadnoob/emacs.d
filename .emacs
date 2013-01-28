@@ -36,7 +36,7 @@
 (load-library "setup-isearch")
 (load-library "setup-server")
 (load-library "setup-ido")
-(load-library "setup-ido")
+(load-library "setup-change-inner")
 
 ;;brew install emacs --cocoa
 ;;brew install emacs --cocoa --use-git-head --HEAD
