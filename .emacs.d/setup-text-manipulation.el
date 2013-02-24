@@ -45,6 +45,23 @@ mode.."
   (if current-prefix-arg       (delete-whitespace)
     ad-do-it))
 
+
+
+(global-set-key (kbd "C-c d") 'fc-insert-date)
+(defun fc-insert-date (prefix)
+  "Insert the current date. With prefix-argument, use ISO format. With
+two prefix arguments, write out the day and month name."
+  (interactive "P")
+  (let ((format (cond
+                 ;;((not prefix) "%Y-%m-%d")
+                 ((not prefix) "%A %Y-%m-%d %T%z")
+                 ((equal prefix '(4)) "%d.%m.%Y")
+                 (t "%A, %d. %B %Y")))
+        (system-time-locale "en_US"))
+    (insert (format-time-string format))))
+
+
+
 (defun tidy-buffer-xml ()
   "Run Tidy HTML parser on current buffer. Function to run Tidy HTML parser on buffer, requires tidy"
   (interactive)
@@ -117,6 +134,15 @@ mode.."
 (global-set-key (kbd "C-c l")         (quote copy-line))
 (global-set-key (kbd "C-c p")         (quote duplicate-line))
 
+
+
+;;;###autoload
+(defun zap-upto-char (arg char)
+  "like `zap-to-char', but doesn't zap char"
+  (interactive "p\ncZap up to char: ")
+  (zap-to-char arg char)
+  (insert char)
+  (backward-char))
 
 
 (provide 'setup-text-manipulation)

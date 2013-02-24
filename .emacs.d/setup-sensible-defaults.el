@@ -95,7 +95,7 @@
 
 (when (boundp 'mouse-1-click-follows-link) ; Do not use mouse-1 to follow links.
   (setq mouse-1-click-follows-link nil))   ; Other values to consider: 100, `double'.
-                                        ;    The default is bad.
+                                           ; The default is bad.
 
 ;; removed at emacs 24.2.91
 ;;(mouse-sel-mode -1)      
@@ -106,9 +106,6 @@
 (if (not running-emacs-on-cygwin)
     (windmove-default-keybindings 'meta))
 
-
-(custom-set-variables
- '(Buffer-menu-buffer+size-width 40))
 
 (if (not running-emacs-on-cygwin)
     (progn (require 'visible-mark)
@@ -123,7 +120,8 @@
  '(nxhtml-global-minor-mode t)
  '(nxhtml-skip-welcome t)
  '(completion-ignore-case t)
- '(org-cycle-global-at-bob t))
+ '(org-cycle-global-at-bob t)
+ '(indent-tabs-mode nil))
 
 
 ;;counteract what is done in info+, add back same window....
@@ -148,7 +146,9 @@
  diff-switches "-u"
  visible-bell nil
  enable-recursive-minibuffers t
+ show-paren-style 'parenthesis
  ;;show-paren-style 'mixed
+ ;;show-paren-style 'expression
  ;;tab-width 3
  save-place t
  ;;save-place t nil (saveplace)
@@ -184,7 +184,35 @@
  icicle-reminder-prompt-flag nil
  isearch-allow-scroll t
  ispell-program-name "aspell"
+ 
  )
+
+
+(custom-set-variables
+ '(Buffer-menu-buffer+size-width 40)
+ '(truncate-lines 1)
+ '(backup-inhibited t))
+
+ ;; Don't open files from the workspace in a new frame
+  (setq ns-pop-up-frames nil)
+
+;; (setq mac-option-key-is-meta nil
+;; mac-command-key-is-meta t
+;; mac-command-modifier 'meta
+;; mac-option-modifier 'none)
+
+
+
+;;
+;; the main change from default mode-line-format here is to remove the "dashes" at the end of the modeline.
+;;
+(custom-set-variables
+ '(mode-line-format '("%e" mode-line-front-space mode-line-mule-info mode-line-client mode-line-modified mode-line-remote mode-line-frame-identification mode-line-buffer-identification "   " mode-line-position
+                     (vc-mode vc-mode)
+                     "  " mode-line-modes mode-line-misc-info)))
+                    
+
+
 
 
 (provide 'setup-sensible-defaults)

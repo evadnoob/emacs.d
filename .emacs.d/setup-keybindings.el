@@ -4,8 +4,10 @@
 ;;(global-set-key "\C-x\C-b"       'ibuffer)
 ;;(global-set-key "\C-x\C-b"       'ibuffer-bs-show)
 
-
-
+(global-set-key (kbd "M-%") 'query-replace-regexp)
+(global-set-key (kbd "M-*") 'query-replace)
+(global-set-key (kbd "M-&") 'query-replace)                                       
+                               
 (eval-after-load "buff-menu" '(require 'buff-menu+))
 ;;(global-set-key "\C-x\C-b"      'buffer-menu)
 (global-set-key "\C-x\C-b"        'bs-show)
@@ -23,6 +25,7 @@
 (global-set-key [f4]             'find-dired)
 (global-set-key "\C-c\C-a"       'beginning-of-line)
 ;;(global-set-key "\C-a"       'beginning-of-line-text)
+
 
 
 (global-set-key "\C-a"       '(lambda()
@@ -116,10 +119,6 @@
 
 
 
-
-(global-set-key "\M-z" 'zap-upto-char)
-
-
 ;;(global-set-key (kbd "<C-lwindow>") (lookup-key global-map (kbd "C-x")))
 ;;(global-set-key (kbd "<lwindow>") (lookup-key global-map (kbd "<meta>")))
 ;;http://lists.gnu.org/archive/html/emacs-devel/2006-04/msg00096.html
@@ -146,8 +145,14 @@
 ;;(global-set-key [delete]     'delete-char)
 (global-set-key [C-delete]     'delete-region)
 
+(global-set-key (kbd "M-z") 'zap-up-to-char)
+(global-set-key (kbd "M-Z") 'zap-to-char)
 
-
-
+;; Should be able to eval-and-replace anywhere.
+(global-set-key (kbd "C-c C-e") 'eval-and-replace)
 
 (provide 'setup-keybindings)
+
+
+
+

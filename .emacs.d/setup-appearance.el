@@ -161,26 +161,35 @@
 ;;       (color-theme--dmb-default2)))
 
 
-(if is-darwin 
-    (progn
-      (require 'color-theme)
-      (color-theme-initialize)
+(when is-darwin 
+  (require 'color-theme)
+  (color-theme-initialize)
+  
+  ;;(load-library "color-theme-sunburst")
+  ;;(color-theme-sunburst)
 
-      ;;(load-library "color-theme-sunburst")
-      ;;(color-theme-sunburst)
-      
-      ;;(load-library "color-theme--dmb-default3")
-      ;;(color-theme--dmb-default3)
+ (when (display-graphic-p)
+   (load-library "color-theme--dmb-default3")
+   (color-theme--dmb-default3))
+ 
+  ;;(transparency-on)
+  
+   ;;(load-library "color-theme-hihat")
+   ;;(color-theme-hihat)
+  
+  ;;(load-library "color-theme-jadedragon-660650")
+  ;;(color-theme-jadedragon-660650)
+  
+  ;;(add-to-list 'load-path (*emacs ".emacs.x/.emacs.p/emacs-soothe-theme"))
+  ;;(load-library "soothe-theme")
 
-      (load-library "color-theme-jadedragon-660650")
-      (color-theme-jadedragon-660650)
-      
-      (transparency-on)
-      (add-to-list 'load-path (*emacs ".emacs.x/.emacs.p/emacs-soothe-theme"))
-      (load-library "soothe-theme")
-      ;;(color-theme-soothe)
-       ))
-
+ 
+ ;;(transparency-on)
+ (when (not (display-graphic-p))
+   (load-library "color-theme-dmb-dark")
+   (color-theme-dmb-dark))
+  
+)
 
 ;;(load-library "color-theme-twilight")
 ;;(color-theme-twilight)
@@ -196,7 +205,8 @@
 ;;(set-face-background 'hl-line "#FFE3AB")
 ;;(set-face-background 'hl-line "#D85652")
 ;;(set-face-background 'hl-line "#CDE1FF")
-;;(set-face-foreground  'hl-line "#000000")
+(set-face-foreground  'hl-line "#000000")
+(set-face-background  'hl-line "alice blue")
 
 ;; Highlight in yasnippet
 ;;(set-face-background 'yas/field-highlight-face "#333399")

@@ -9,6 +9,7 @@
 (add-to-list 'load-path (*emacs ".emacs.x/.emacs.p/less-css-mode"))
 (require 'less-css-mode)
 
+
 ;; (add-to-list 'flymake-allowed-file-name-masks '("\\.less$" flymake-php-init))
 ;; (add-to-list 'flymake-allowed-file-name-masks '("\\.install$" flymake-php-init))
 ;; (add-to-list 'flymake-allowed-file-name-masks '("\\.inc$" flymake-php-init))
@@ -87,7 +88,8 @@
 (custom-set-variables 
  '(js2-basic-offset 2)
  '(less-css-indent-level 2)
- '(js2-bounce-indent-p nil))
+ '(js2-bounce-indent-p nil)
+ '(css-indent-offset 2))
 
 
 (provide 'setup-js-mode)

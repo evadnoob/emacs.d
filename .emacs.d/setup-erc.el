@@ -6,11 +6,17 @@
 ;; older stuff
 ;;(defalias 'open-network-stream 'socks-open-network-stream)
 
+(defcustom irc-password-file "~/Dropbox/.irc.conf" "location of the irc password file")
+
+(when (file-exists-p irc-password-file)
+  (load-file irc-password-file)
+  (setq filename-history (delete irc-password-file file-name-history)))
+
 ;;this works:
 (custom-set-variables 
-  '(socks-server (list "thomson" "socksproxy" 1080 5))
-  '(socks-override-functions 1)
-  '(socks-noproxy '("localhost")))
+ '(socks-server (list "tor" "localhost" 9050 5))
+ '(socks-override-functions 1)
+ '(socks-noproxy '("localhost")))
 
 ;; the following works for just ERC
 ;;(setq erc-server-connect-function 'socks-open-network-stream)
@@ -29,7 +35,7 @@
 ;; use it.
 (defun erc-cmd-UPTIME (&rest ignore)
   "Display the uptime of the system, as well as some load-related
-     stuff, to the current ERC buffer."
+      stuff, to the current ERC buffer."
   (let ((uname-output
          (replace-regexp-in-string
           ", load average: " "] {Load average} ["
@@ -43,16 +49,12 @@
     (erc-send-message
      (concat "{Uptime} [" uname-output "]"))))
 
-;; This causes ERC to connect to the Freenode network upon hitting
-;; C-c e f.
-(global-set-key "\C-cef" (lambda () (interactive)
-                           (erc :server "irc.freenode.net" :port "6667"
-                                :nick "evadnoob")))
 
 ;;(setq erc-autojoin-channels-alist '(("freenode.net" "#emacs" "#erc")))
 ;;(setq erc-autojoin-channels-alist '(("freenode.net" "#emacs" "#zsh" "#clojure")))
 ;;(setq erc-autojoin-channels-alist '(("freenode.net" "#emacs" "#zsh" "#scala")))
-(setq erc-autojoin-channels-alist '(("freenode.net" "#emacs" "#documentcloud")))
+;;(setq erc-autojoin-channels-alist '(("freenode.net" "#emacs" "#documentcloud")))
+(setq erc-autojoin-channels-alist '(("irc.matrixinsights.com" "#devops")))
 
 ;;#defocus #freenode
 
@@ -62,8 +64,8 @@
 
 (custom-set-variables
  '(erc-modules '(netsplit fill button match track completion readonly
-			 networks ring autojoin noncommands irccontrols
-			 move-to-prompt stamp menu list scrolltobottom)))
+                          networks ring autojoin noncommands irccontrols
+                          move-to-prompt stamp menu list scrolltobottom)))
 
 
 ;; (require 'dbus)
@@ -83,7 +85,7 @@
 
 (defun growl (title message)
   "Shows a message through the growl notification system using
- `growlnotify-command` as the program."
+  `growlnotify-command` as the program."
   (flet ((encfn (s) (encode-coding-string s (keyboard-coding-system))) )
     (let* ((process (start-process "growlnotify" nil
                                    growlnotify-command
@@ -105,6 +107,15 @@
 
 (add-hook 'erc-text-matched-hook 'my-erc-hook)
 
+(erc-ring-mode 1)
 
-;; /msg chanserv register ##m8trx m4tr1x m8trx sys-ops discussion
-;; /mode ##m8trx +ip
+(defun erc-connect ()
+  "Startup normal erc connections"
+  (interactive)
+  ;; This causes ERC to connect to the Freenode network upon hitting
+  ;; C-c e f.
+  (erc :server "irc.freenode.net" :port "6667" :nick "d8v3" :password (plist-get (assoc 'freenode  irc-nicks-passwords-and-servers) :password))
+  (erc :server "irc.matrixinsights.com" :port "6667" :nick "evadnoob" :password (plist-get (assoc 'matrixinsights  irc-nicks-passwords-and-servers) :password)))
+
+;;(irc-get-auth-property 'matrixinsights :password
+

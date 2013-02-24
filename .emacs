@@ -19,6 +19,7 @@
 (add-to-list 'load-path (*emacs ".emacs.x/.emacs.d"))
 (add-to-list 'load-path (*emacs ".emacs.x/.emacs.p"))
 
+
 ;; Reminder to self: replacing dmb-main with more modular setup
 ;; files...(load-library "dmb-main.el") (load-library "dmb-var.el")
 (load-library "setup-sensible-defaults")
@@ -27,10 +28,12 @@
 (load-library "setup-grep")
 (load-library "setup-org-mode")
 (load-library "setup-shell-mode")
+(load-library "setup-ansi-term")
 (load-library "setup-erc")
 (load-library "setup-nxml-mode")
 (load-library "setup-js-mode")
 (load-library "setup-lorem-ipsum")
+(load-library "setup-eval-and-replace")
 (load-library "setup-keybindings")
 (load-library "setup-helm")
 (load-library "setup-text-manipulation")
@@ -38,6 +41,8 @@
 (load-library "setup-server")
 (load-library "setup-ido")
 (load-library "setup-change-inner")
+;;(load-library "setup-mark-multiple")
+(load-library "setup-nw")
 
 
 ;;brew install emacs --cocoa
@@ -46,4 +51,4 @@
 
 (setq dmb-dotemacs-end-time (current-time))
 (message 
- (format "emacs done %s seconds." (time-to-seconds (time-subtract dmb-dotemacs-end-time dmb-dotemacs-start-time))))
+ (format "emacs init-time %s, wall clock %s ." (emacs-init-time) (time-to-seconds (time-subtract dmb-dotemacs-end-time dmb-dotemacs-start-time))))

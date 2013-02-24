@@ -39,6 +39,8 @@
      (comint-highlight-prompt ((t (:foreground "blue" ))))
      (mumamo-background-chunk-major ((t (:background nil ))))
      (mumamo-background-chunk-submode ((t (:background nil ))))
+
+     
      
 )))
 
