@@ -43,6 +43,8 @@
 (load-library "setup-change-inner")
 ;;(load-library "setup-mark-multiple")
 (load-library "setup-nw")
+(load-library "setup-ansi-term")
+(load-library "setup-undo-tree")
 
 
 ;;brew install emacs --cocoa
