@@ -1,9 +1,9 @@
 
 
-(require 'ansi-color)
+;;(require 'ansi-color)
 
-(autoload 'ansi-color-for-comint-mode-on "ansi-color" nil t)
-(add-hook 'shell-mode-hook 'ansi-color-for-comint-mode-on)
+;;(autoload 'ansi-color-for-comint-mode-on "ansi-color" nil t)
+;;(add-hook 'shell-mode-hook 'ansi-color-for-comint-mode-on)
 
 (setq dirtrack-list '("|Pr0mPT|\\([^|]*\\)|" 1 nil))
 

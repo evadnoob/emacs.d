@@ -1,0 +1,77 @@
+
+[submodule "change-inner.el"]
+path = .emacs.p/change-inner.el
+url = https://github.com/magnars/change-inner.el.git
+
+[submodule "js3-mode"]
+path = .emacs.p/js3-mode
+url = https://github.com/thomblake/js3-mode.git
+
+[submodule "js2-mode"]
+path = .emacs.p/js2-mode
+url = https://github.com/mooz/js2-mode.git
+
+[submodule "helm"]
+path = .emacs.p/helm
+url = https://github.com/emacs-helm/helm.git
+
+[submodule "expand-region"]
+path = .emacs.p/expand-region.el
+url = https://github.com/magnars/expand-region.el.git
+
+[submodule "yasnippet"]
+path = .emacs.p/yasnippet
+url = https://github.com/capitaomorte/yasnippet.git
+
+[submodule "less-css-mode"]
+path = .emacs.p/less-css-mode
+url = https://github.com/purcell/less-css-mode.git
+
+[submodule "slime"]
+path = .emacs.p/slime
+url = https://github.com/antifuchs/slime.git
+
+[submodule "swank-js"]
+path = .emacs.p/swank-js
+url = https://github.com/swank-js/swank-js.git 
+
+[submodule "mark-multiple"]
+path = .emacs.p/mark-multiple.el
+url = https://github.com/magnars/mark-multiple.el.git
+
+[submodule "full-ack"]
+path = .emacs.p/full-ack
+url = https://github.com/nschum/full-ack.git
+
+[submodule "jshint-mode"]
+path = .emacs.p/jshint-mode
+url = https://github.com/daleharvey/jshint-mode.git
+
+[submodule "malabar-mode"]
+path = .emacs.p/malabar-mode
+url = http://github.com/espenhw/malabar-mode.git
+
+[submodule "markdown-mode"]
+path = .emacs.p/markdown-mode
+url = https://jblevins.org/git/markdown-mode.git
+
+[submodule "emacs-soothe-theme"]
+path = .emacs.p/emacs-soothe-theme
+url = https://github.com/evadnoob/emacs-soothe-theme.git
+
+[submodule "s.el"]
+path = .emacs.p/s.el
+url = https://github.com/magnars/s.el.git
+
+[submodule "undo-tree.el"]
+path = .emacs.p/undo-tree
+url = http://www.dr-qubit.org/git/undo-tree.git
+
+[submodule "markdown-mode"]
+path = .emacs.p/markdown-mode
+url = git://jblevins.org/git/markdown-mode.git
+
+[submodule "python-mode"]
+path = .emacs.p/python-mode
+url = https://github.com/emacsmirror/python-mode.git
+

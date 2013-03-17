@@ -56,7 +56,7 @@
 ;;(setq erc-autojoin-channels-alist '(("freenode.net" "#emacs" "#erc")))
 ;;(setq erc-autojoin-channels-alist '(("freenode.net" "#emacs" "#zsh" "#clojure")))
 ;;(setq erc-autojoin-channels-alist '(("freenode.net" "#emacs" "#zsh" "#scala")))
-(setq erc-autojoin-channels-alist '(("irc.freenode.net" "#emacs" "#documentcloud" "#erc" "##aws")))
+(setq erc-autojoin-channels-alist '(("freenode.net" "#emacs" "#documentcloud" "#erc" "##aws")))
 (setq erc-autojoin-channels-alist '(("irc.matrixinsights.com" "#devops")))
 
 ;;#defocus #freenode
@@ -66,7 +66,7 @@
 
 
 (custom-set-variables
- '(erc-modules '(netsplit fill button match track completion readonly notifications
+ '(erc-modules '(netsplit fill button match track completion readonly
                           networks ring autojoin noncommands irccontrols
                           move-to-prompt stamp menu list scrolltobottom)))
 

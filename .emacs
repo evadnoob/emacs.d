@@ -41,10 +41,11 @@
 (load-library "setup-server")
 (load-library "setup-ido")
 (load-library "setup-change-inner")
-;;(load-library "setup-mark-multiple")
+(load-library "setup-mark-multiple")
 (load-library "setup-nw")
 (load-library "setup-ansi-term")
 (load-library "setup-undo-tree")
+(load-library "setup-python-mode")
 
 
 ;;brew install emacs --cocoa
@@ -52,5 +53,5 @@
 ;; To open it with Alfred or Quicksilver, you have to copy Emacs.app into /Applications instead of the symlink that brew places there.
 
 (setq dmb-dotemacs-end-time (current-time))
-(message 
- (format "emacs init-time %s, wall clock %s ." (emacs-init-time) (time-to-seconds (time-subtract dmb-dotemacs-end-time dmb-dotemacs-start-time))))
+;;(message 
+;; (format "emacs init-time %s, wall clock %s ." (emacs-init-time) (time-to-seconds (time-subtract dmb-dotemacs-end-time dmb-dotemacs-start-time))))

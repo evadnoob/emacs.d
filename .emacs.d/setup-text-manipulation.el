@@ -137,7 +137,7 @@ two prefix arguments, write out the day and month name."
 
 
 ;;;###autoload
-(defun zap-upto-char (arg char)
+(defun zap-up-to-char (arg char)
   "like `zap-to-char', but doesn't zap char"
   (interactive "p\ncZap up to char: ")
   (zap-to-char arg char)
