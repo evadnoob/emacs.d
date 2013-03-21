@@ -3,7 +3,7 @@
 ;;(require 'ansi-color)
 
 ;;(autoload 'ansi-color-for-comint-mode-on "ansi-color" nil t)
-;;(add-hook 'shell-mode-hook 'ansi-color-for-comint-mode-on)
+(add-hook 'shell-mode-hook 'ansi-color-for-comint-mode-off)
 
 (setq dirtrack-list '("|Pr0mPT|\\([^|]*\\)|" 1 nil))
 
@@ -25,7 +25,5 @@
 
 (setq auto-mode-alist
       (cons '("\\.zsh-theme$" . shell-script-mode) auto-mode-alist))
-
-
 
 (provide 'setup-shell-mode)

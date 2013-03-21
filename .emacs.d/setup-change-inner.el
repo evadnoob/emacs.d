@@ -17,7 +17,9 @@
 
 ;; Expand region (increases selected region by semantic units)
 ;;(global-set-key (kbd "C-=") 'er/expand-region)
-(global-set-key (kbd "C-@") 'er/expand-region)
-
+;;(global-set-key (kbd "C-=") 'er/expand-region)
+;;(global-set-key "\C-=" 'er/expand-region)
+(global-set-key [C-=]  'er/expand-region)
+;;(global-set-key (kbd "C-SPC") 'set-mark-command)
 
 (provide 'setup-change-inner)

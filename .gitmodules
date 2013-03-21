@@ -75,3 +75,6 @@ url = git://jblevins.org/git/markdown-mode.git
 path = .emacs.p/python-mode
 url = https://github.com/emacsmirror/python-mode.git
 
+[submodule "org-mode"]
+path = .emacs.p/org-mode
+url = git://orgmode.org/org-mode.git

@@ -210,9 +210,22 @@
  '(mode-line-format '("%e" mode-line-front-space mode-line-mule-info mode-line-client mode-line-modified mode-line-remote mode-line-frame-identification mode-line-buffer-identification "   " mode-line-position
                      (vc-mode vc-mode)
                      "  " mode-line-modes mode-line-misc-info)))
-                    
 
 
 
+;; auto insert parens
+(electric-pair-mode 1)
+
+
+;; ringing all the time, please stop, seriously on ctrl-G?
+;; http://www.emacswiki.org/emacs/AlarmBell
+;; (defun my-bell-function ()
+;;   (unless (memq this-command
+;;     	'(isearch-abort abort-recursive-edit exit-minibuffer
+;;               keyboard-quit mwheel-scroll down up next-line previous-line
+;;               backward-char forward-char))
+;;     (ding)))
+;; (setq ring-bell-function 'my-bell-function)
+(setq ring-bell-function 'ignore)
 
 (provide 'setup-sensible-defaults)

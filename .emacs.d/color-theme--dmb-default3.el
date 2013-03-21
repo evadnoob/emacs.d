@@ -47,6 +47,7 @@
      (compilation-info ((t (:foreground "green4"))))
      (dmb-face-ibuffer-jde ((t (:foreground "blue4"))))
      (erc-timestamp-face ((t (:foreground "gray"))))
+     (magit-item-highlight  ((t (:background "lightgreen"))))
      ;; (flymake-errline ((((class color)) (:underline "OrangeRed"))))
      ;; (flymake-warnline ((((class color)) (:underline "DarkSlateBlue"))))
      ;; (semantic-tag-boundary-face ((((class color)) (:slant italic))))
