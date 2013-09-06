@@ -1,13 +1,22 @@
 ;;
 ;; setup js development mode
 ;;
-(require 'mercurial)
+;;(require 'mercurial)
 
 (setq auto-mode-alist (cons '("\\.json" . javascript-mode) auto-mode-alist))
 
 (require 'flymake)
 (add-to-list 'load-path (*emacs ".emacs.x/.emacs.p/less-css-mode"))
 (require 'less-css-mode)
+
+;; force aspell/ispell to use this exact program
+;; be sure to intall aspell like brew install --lang=en
+(setq-default ispell-program-name "/usr/local/bin/aspell")
+
+(add-hook 'prog-mode-hook 'flyspell-prog-mode)
+(add-hook 'prog-mode-hook 'subword-mode)
+(add-hook 'js2-mode-hook 'flyspell-prog-mode)
+(add-hook 'js2-mode-hook 'subword-mode)
 
 
 ;; (add-to-list 'flymake-allowed-file-name-masks '("\\.less$" flymake-php-init))
@@ -93,3 +102,5 @@
 
 
 (provide 'setup-js-mode)
+
+

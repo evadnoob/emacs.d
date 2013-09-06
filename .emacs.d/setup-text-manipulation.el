@@ -42,7 +42,7 @@
 argument to delete only unneeded whitespace according to major
 mode.."
   (interactive "*P")
-  (if current-prefix-arg       (delete-whitespace)
+  (if current-prefix-arg (delete-whitespace)
     ad-do-it))
 
 
@@ -80,8 +80,16 @@ two prefix arguments, write out the day and month name."
 (defun make-mongo-object-id ()
   "shell to mongo shell and create an object id"
   (interactive)
-  ;;(insert (shell-command-to-string "/usr/local/bin/mongo --nodb --norc --quiet --eval 'ObjectId()' | perl -pe 's/\n//'")))
-  (insert (shell-command-to-string "/usr/local/bin/mongo --nodb --norc --quiet --eval 'ObjectId()' | perl -pe 's/ObjectId\(.+\)\n/\${1}/'")))
+  (insert (replace-regexp-in-string "ObjectId(\"\\(.*?\\)\")\n" "\\1" 
+                            (shell-command-to-string "/usr/local/bin/mongo --nodb --norc --quiet --eval 'ObjectId()'"))))
+
+
+(defun test-return-value ()
+""
+(interactive)
+"x")
+
+
 
 
 ;;

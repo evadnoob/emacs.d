@@ -24,9 +24,10 @@
 ;; 
 ;; https://github.com/ChrisJohnsen/tmux-MacOSX-pasteboard.git
 
-(custom-set-variables
- '(save-interprogram-paste-before-kill t))
-
 )
+
+
+(custom-set-variables
+ '(save-interprogram-paste-before-kill nil))
 
 (provide 'setup-nw)

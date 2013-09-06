@@ -47,11 +47,14 @@
      (compilation-info ((t (:foreground "green4"))))
      (dmb-face-ibuffer-jde ((t (:foreground "blue4"))))
      (erc-timestamp-face ((t (:foreground "gray"))))
-     (magit-item-highlight  ((t (:background "lightgreen"))))
+     (magit-item-highlight  ((t (:background "#ebebeb"))))
+     ;;(mode-line ((t (:background "grey8" :foreground "grey74" :overline "orange" :box (:line-width -1 :color "grey80" :style none)  ))))
+     (mode-line ((t (:background "grey75" :foreground "#333" :box nil :overline "orange"))))
+     (mode-line-inactive ((t (:background "gray8" :foreground "grey50" :overline "SteelBlue4" :box (:line-width -1 :color "grey80" :style none) ))))
+     
      ;; (flymake-errline ((((class color)) (:underline "OrangeRed"))))
      ;; (flymake-warnline ((((class color)) (:underline "DarkSlateBlue"))))
      ;; (semantic-tag-boundary-face ((((class color)) (:slant italic))))
-       
 )))
 
 

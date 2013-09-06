@@ -78,3 +78,12 @@ url = https://github.com/emacsmirror/python-mode.git
 [submodule "org-mode"]
 path = .emacs.p/org-mode
 url = git://orgmode.org/org-mode.git
+[submodule ".emacs.p/nyan-mode"]
+	path = .emacs.p/nyan-mode
+	url = https://github.com/TeMPOraL/nyan-mode
+[submodule ".emacs.p/emacs-jabber"]
+	path = .emacs.p/emacs-jabber
+	url = https://github.com/demyanrogozhin/emacs-jabber.git
+[submodule ".emacs.p/color-theme-sunburst"]
+	path = .emacs.p/color-theme-sunburst
+	url = https://github.com/neomantic/Emacs-Sunburst-Color-Theme.git

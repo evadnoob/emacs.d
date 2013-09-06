@@ -8,7 +8,7 @@
 	  (font . "-apple-Monaco-medium-normal-normal-*-10-*-*-*-m-0-iso10646-1")
           ;;(cursor-type bar . 3)
           ;;(cursor-type bar . 8)
-          ;;(cursor-color . "#1E16ED")
+          (cursor-color . "#1E16ED")
           (left-fringe . 0)
           (right-fringe . 0)
           (menu-bar-lines  .  0)
@@ -31,6 +31,7 @@
           (internal-border-width  .  0))))
 
 (setq initial-frame-alist default-frame-alist)
+
 
 (add-to-list 'load-path (*emacs ".emacs.x/.emacs.p/color-theme-6.6.0"))
 (add-to-list 'load-path (*emacs ".emacs.x/.emacs.p/color-theme-6.6.0/themes"))
@@ -163,33 +164,79 @@
 
 (when is-darwin 
   (require 'color-theme)
+  (setq color-theme-is-global nil)
   (color-theme-initialize)
   
-  ;;(load-library "color-theme-sunburst")
-  ;;(color-theme-sunburst)
 
- (when (display-graphic-p)
-   (load-library "color-theme--dmb-default3")
-   (color-theme--dmb-default3))
- 
-  ;;(transparency-on)
-  
-   ;;(load-library "color-theme-hihat")
-   ;;(color-theme-hihat)
-  
-  ;;(load-library "color-theme-jadedragon-660650")
-  ;;(color-theme-jadedragon-660650)
-  
-  ;;(add-to-list 'load-path (*emacs ".emacs.x/.emacs.p/emacs-soothe-theme"))
-  ;;(load-library "soothe-theme")
+ ;; (transparency-on)
 
- 
- ;;(transparency-on)
- (when (not (display-graphic-p))
-   (load-library "color-theme-dmb-dark")
-   (color-theme-dmb-dark))
+  ;; (add-to-list 'load-path (*emacs ".emacs.x/.emacs.p/color-theme-sunburst"))
+  ;; (load-library "color-theme-sunburst")
+  ;; (color-theme-sunburst)
   
-)
+  ;;  (load-library "color-theme-hihat")
+  ;;  (color-theme-hihat)
+  
+  ;; (load-library "color-theme-jadedragon-660650")
+  ;; (color-theme-jadedragon-660650)
+  
+;;  (add-to-list 'load-path (*emacs ".emacs.x/.emacs.p/emacs-soothe-theme"))
+;;  (load-library "soothe-theme")
+
+
+  
+  ;;
+  ;; test for frame and set color theme correctly depending on tty or graphics display.
+  ;;
+  (defun color-theme-for-frame (frame)
+    (let ((color-theme-is-global nil))
+      (select-frame frame)
+      (when (not (window-system frame))
+        (message "window-system, setting color theme to dmb-dark")
+        ;;(load-library "color-theme-dmb-dark")
+        ;;(color-theme-dmb-dark)
+        )
+      
+      (when (window-system frame)
+        (message "window-system, setting color theme to dmb-default3")
+        (load-library "color-theme--dmb-default3")
+        (color-theme--dmb-default3))
+      ))
+
+  ;; hook on after-make-frame-functions
+  (add-hook 'after-make-frame-functions 'color-theme-for-frame)
+
+  ;; Start up the color theme in this initial frame.
+  (color-theme-for-frame (selected-frame))
+  ;; (let ((color-theme-is-global nil))
+  ;;   (when (window-system)
+  ;;     (color-theme-railscasts)))
+
+
+  
+  ;; (load-theme 'tango t t)
+  ;; (load-theme 'tango-dark t t)
+  
+  ;; (defun color-theme-for-frame (frame)
+  ;;   (select-frame frame)
+  ;;   (when (not (window-system frame))
+  ;;     (disable-theme 'tango-dark) ; in case it was active
+  ;;     (enable-theme 'tango))
+    
+  ;;   (when (window-system frame)
+  ;;     (disable-theme 'tango) ; in case it was active
+  ;;     (enable-theme 'tango-dark)))
+  
+  ;; ;;(transparency-on)
+  ;; (when (not (display-graphic-p))
+  ;;   (load-library "color-theme-dmb-dark")
+  ;;   (color-theme-dmb-dark))
+  
+  ;; (when (window-system)
+  ;;   (load-library "color-theme--dmb-default3")
+  ;;   (color-theme--dmb-default3))
+  
+  )
 
 ;;(load-library "color-theme-twilight")
 ;;(color-theme-twilight)
@@ -205,8 +252,8 @@
 ;;(set-face-background 'hl-line "#FFE3AB")
 ;;(set-face-background 'hl-line "#D85652")
 ;;(set-face-background 'hl-line "#CDE1FF")
-(set-face-foreground  'hl-line "#000000")
-(set-face-background  'hl-line "alice blue")
+;;(set-face-foreground  'hl-line "#000000")
+;;(set-face-background  'hl-line "alice blue")
 
 ;; Highlight in yasnippet
 ;;(set-face-background 'yas/field-highlight-face "#333399")
@@ -220,5 +267,21 @@
         ("DONE" . (:foreground "green" :weight bold))
         ("IMPEDED" . (:foreground "red" :weight bold))
         ))
+
+(custom-set-variables 
+ '(custom-theme-directory (*emacs ".emacs.x/.emacs.d/themes")))
+
+;; (dolist
+;;     (path (directory-files (*emacs ".emacs.x/.emacs.d/themes") t "\\w+"))
+;;   (when (file-directory-p path)
+;;     (add-to-list 'custom-theme-load-path path)))
+
+;; (defun use-default-theme ()
+;;   (interactive)
+;;   (disable-theme 'prez)
+;;   (load-theme 'default-black)
+;;   (when (boundp 'magnars/default-font)
+;;     (set-face-attribute 'default nil :font magnars/default-font)))
+
 
 (provide 'dmb-appearance)
