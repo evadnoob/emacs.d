@@ -13,7 +13,7 @@
         ))
 
 (setq alist-of-make-patterns
-      '(("^\\(.*\\)$" .  "+ \"\\1\"")
+      '(("^\\(.*\\)$" .  "+ \'\\1\'")
         ))
 
 (setq alist-of-line-break-patterns
