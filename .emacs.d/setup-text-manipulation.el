@@ -67,7 +67,7 @@ two prefix arguments, write out the day and month name."
   (interactive)
   (if (get-buffer "tidy-errs") (kill-buffer "tidy-errs"))
   (shell-command-on-region (point-min) (point-max)
-    "tidy -config ~/.emacs.d/.tidyrc" t t)
+    "tidy -config ~/Dropbox/.emacs.x/.emacs.d/.tidyrc" t t)
   ;; (shell-command-on-region (point-min) (point-max)
   ;;   "tidy -xml -f /tmp/tidy-errs -q -i -wrap 72 -utf8 -omit" t t)
   (find-file-other-window "/tmp/tidy-errs")
