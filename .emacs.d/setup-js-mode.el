@@ -6,8 +6,15 @@
 (setq auto-mode-alist (cons '("\\.json" . javascript-mode) auto-mode-alist))
 
 (require 'flymake)
+;; (add-to-list 'load-path (*emacs ".emacs.x/.emacs.p/less-css-mode"))
+;; (require 'less-css-mode)
+
+(add-to-list 'load-path (*emacs ".emacs.x/.emacs.p/flymake-less"))
+(add-to-list 'load-path (*emacs ".emacs.x/.emacs.p/flymake-easy"))
 (add-to-list 'load-path (*emacs ".emacs.x/.emacs.p/less-css-mode"))
-(require 'less-css-mode)
+(require 'flymake-less)
+(add-hook 'less-css-mode-hook 'flymake-less-load)
+
 
 ;; force aspell/ispell to use this exact program
 ;; be sure to intall aspell like brew install --lang=en

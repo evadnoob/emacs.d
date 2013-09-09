@@ -47,6 +47,14 @@ mode.."
 
 
 
+(defadvice tidy-html-for-js (around tidy-buffer-xml (&optional n) activate compile)
+  ""
+  (interactive "*P")
+  (unmake-code-statement)
+  (if current-prefix-arg (tidy-buffer-xml)
+    ad-do-it))
+
+
 (global-set-key (kbd "C-c d") 'fc-insert-date)
 (defun fc-insert-date (prefix)
   "Insert the current date. With prefix-argument, use ISO format. With

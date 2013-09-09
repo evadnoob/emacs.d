@@ -87,3 +87,9 @@ url = git://orgmode.org/org-mode.git
 [submodule ".emacs.p/color-theme-sunburst"]
 	path = .emacs.p/color-theme-sunburst
 	url = https://github.com/neomantic/Emacs-Sunburst-Color-Theme.git
+[submodule ".emacs.p/flymake-less"]
+	path = .emacs.p/flymake-less
+	url = https://github.com/purcell/flymake-less.git
+[submodule ".emacs.p/flymake-easy"]
+	path = .emacs.p/flymake-easy
+	url = https://github.com/purcell/flymake-easy.git
