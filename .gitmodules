@@ -51,9 +51,6 @@ url = https://github.com/daleharvey/jshint-mode.git
 path = .emacs.p/malabar-mode
 url = http://github.com/espenhw/malabar-mode.git
 
-[submodule "markdown-mode"]
-path = .emacs.p/markdown-mode
-url = https://jblevins.org/git/markdown-mode.git
 
 [submodule "emacs-soothe-theme"]
 path = .emacs.p/emacs-soothe-theme
