@@ -96,4 +96,3 @@ url = git://orgmode.org/org-mode.git
 [submodule ".emacs.p/tmux-MacOSX-pasteboard"]
 	path = .emacs.p/tmux-MacOSX-pasteboard
 	url = https://github.com/ChrisJohnsen/tmux-MacOSX-pasteboard.git
-
