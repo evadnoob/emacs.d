@@ -90,3 +90,12 @@ url = git://orgmode.org/org-mode.git
 [submodule ".emacs.p/flymake-easy"]
 	path = .emacs.p/flymake-easy
 	url = https://github.com/purcell/flymake-easy.git
+[submodule ".emacs.p/pbcopy.el"]
+	path = .emacs.p/pbcopy.el
+	url = https://github.com/jkp/pbcopy.el.git
+[submodule ".emacs.p/smart-forward.el"]
+	path = .emacs.p/smart-forward.el
+	url = https://github.com/magnars/smart-forward.el.git
+[submodule ".emacs.p/tmux-MacOSX-pasteboard"]
+	path = .emacs.p/tmux-MacOSX-pasteboard
+	url = https://github.com/ChrisJohnsen/tmux-MacOSX-pasteboard.git
