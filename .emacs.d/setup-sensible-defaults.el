@@ -68,7 +68,8 @@
     (setq dmb-java-16-home "/usr")
     (setq dmb-java-home dmb-java-16-home)))
 
-(setenv "PATH" (concat dmb-java-home "/bin" ";" (getenv "PATH")))
+;;(setenv "PATH" (concat dmb-java-home "/bin" ";" (getenv "PATH")))
+(setenv "PATH" (concat "/usr/local/bin:" (getenv "PATH")))
 
 (when running-emacs-on-cygwin
     (defalias 'turn-on-font-lock-if-enabled 'turn-on-font-lock-if-desired))
@@ -214,7 +215,7 @@
 
 
 ;; auto insert parens
-(electric-pair-mode 1)
+(electric-pair-mode -1)
 
 
 ;; ringing all the time, please stop, seriously on ctrl-G?
@@ -228,4 +229,6 @@
 ;; (setq ring-bell-function 'my-bell-function)
 (setq ring-bell-function 'ignore)
 
+
+(iswitchb-mode 1)
 (provide 'setup-sensible-defaults)

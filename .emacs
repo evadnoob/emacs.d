@@ -46,9 +46,9 @@
 (load-library "setup-ansi-term")
 (load-library "setup-undo-tree")
 (load-library "setup-python-mode")
-(load-library "setup-magit")
+;;(load-library "setup-magit")
 (load-library "setup-org-mode")
-
+(load-library "setup-highlight-line-mode")
 
 ;;brew install emacs --cocoa
 ;;brew install emacs --cocoa --use-git-head --HEAD

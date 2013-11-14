@@ -7,6 +7,10 @@
 (global-set-key (kbd "M-%") 'query-replace-regexp)
 (global-set-key (kbd "M-*") 'query-replace)
 (global-set-key (kbd "M-&") 'query-replace)                                       
+
+(global-set-key (kbd "M-+") 'text-scale-increase)
+(global-set-key (kbd "M-_") 'text-scale-decrease)
+                                       
                                
 (eval-after-load "buff-menu" '(require 'buff-menu+))
 ;;(global-set-key "\C-x\C-b"      'buffer-menu)
@@ -22,6 +26,7 @@
 (global-set-key [apps]             'iswitchb-buffer)
 (global-set-key "\M-o"           'other-window)
 (global-set-key [f3]             'simple-grep)
+(global-set-key [f2]             'ack-and-a-half)
 (global-set-key [f4]             'find-dired)
 (global-set-key "\C-c\C-a"       'beginning-of-line)
 ;;(global-set-key "\C-a"       'beginning-of-line-text)
