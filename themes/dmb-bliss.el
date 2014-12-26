@@ -49,8 +49,8 @@
  '(mode-line-emphasis                  ((t (                                             :weight bold                                  ))))
  '(mode-line-buffer-id                 ((t (                                             :box nil :weight bold                         ))))
 
- '(mode-line-inactive                  ((t (:foreground "#9ca19e"  :background "#2a2a2a" :box nil :weight light :inherit (mode-line)   ))))
- '(mode-line                           ((t (:foreground "grey75"  :background "color-16" :box nil )))) ;; #c5c8c6
+ '(mode-line-inactive                  ((t (:foreground "#9ca19e"  :background "color-16" :box nil :weight light :inherit (mode-line)   ))))
+ '(mode-line                           ((t (:foreground "grey60"  :background "color-16" :box nil )))) ;; #c5c8c6
 
  '(isearch                             ((t (:foreground "#99ccee"  :background "#444444"                                               ))))
  '(isearch-fail                        ((t (                       :background "#ffaaaa"                                               ))))

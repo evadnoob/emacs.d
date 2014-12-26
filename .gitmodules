@@ -111,3 +111,6 @@ url = git://orgmode.org/org-mode.git
 [submodule ".emacs.p/evil"]
 	path = .emacs.p/evil
 	url = git://gitorious.org/evil/evil.git
+[submodule ".emacs.p/ensime"]
+	path = .emacs.p/ensime
+	url = https://github.com/aemoncannon/ensime.git
