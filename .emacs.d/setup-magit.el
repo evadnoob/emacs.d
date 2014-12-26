@@ -1,7 +1,8 @@
 
-(add-to-list 'load-path (*emacs ".emacs.x/.emacs.p/magit"))
+;;(add-to-list 'load-path (*emacs ".emacs.x/.emacs.p/magit"))
 
 (require 'magit)
+
 
 
 (defadvice magit-status (around magit-fullscreen activate)

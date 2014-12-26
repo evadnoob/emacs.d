@@ -1,10 +1,6 @@
 (when is-darwin
   (setq default-frame-alist
         '(
-          ;;(font . "-apple-DejaVu_Sans_Mono-medium-normal-normal-*-10-*-*-*-m-0-iso10646-1")
-          ;;(font . "-apple-Consolas-medium-normal-normal-*-11-*-*-*-m-0-iso10646-1")
-          ;;(font . "-apple-Menlo-medium-normal-normal-*-11-*-*-*-m-0-iso10646-1")
-	  ;;(font . "-apple-Menlo-medium-normal-normal-*-11-*-*-*-m-0-iso10646-1")
 	  (font . "-apple-Monaco-medium-normal-normal-*-10-*-*-*-m-0-iso10646-1")
           ;;(cursor-type bar . 3)
           ;;(cursor-type bar . 8)
@@ -151,39 +147,6 @@
   :group 'dmb-faces)
 
 
-;; (load-library "dmb-color-theme-late-night")
-
-;; (if (not is-darwin)
-;;     (progn
-;;       (require 'color-theme)
-;;       (color-theme-initialize)
-      
-;;       (load-library "dmb-color-theme-default2")
-;;       (color-theme--dmb-default2)))
-
-
-(when is-darwin 
-  (require 'color-theme)
-  (setq color-theme-is-global nil)
-  (color-theme-initialize)
-  
-
- ;; (transparency-on)
-
-  ;; (add-to-list 'load-path (*emacs ".emacs.x/.emacs.p/color-theme-sunburst"))
-  ;; (load-library "color-theme-sunburst")
-  ;; (color-theme-sunburst)
-  
-  ;;  (load-library "color-theme-hihat")
-  ;;  (color-theme-hihat)
-  
-  ;; (load-library "color-theme-jadedragon-660650")
-  ;; (color-theme-jadedragon-660650)
-  
-;;  (add-to-list 'load-path (*emacs ".emacs.x/.emacs.p/emacs-soothe-theme"))
-;;  (load-library "soothe-theme")
-
-
   
   ;;
   ;; test for frame and set color theme correctly depending on tty or graphics display.
@@ -193,9 +156,8 @@
       (select-frame frame)
       (when (not (window-system frame))
         (message "window-system, setting color theme to dmb-dark")
-        ;;(load-library "color-theme-dmb-dark")
-        ;;(color-theme-dmb-dark)
-        )
+        (add-to-list 'custom-theme-load-path (*emacs ".emacs.x/themes/"))
+        (load-file (*emacs ".emacs.x/themes/dmb-bliss.el")))
       
       (when (window-system frame)
         (message "window-system, setting color theme to dmb-default3")
@@ -213,52 +175,8 @@
   ;;     (color-theme-railscasts)))
 
 
-  
-  ;; (load-theme 'tango t t)
-  ;; (load-theme 'tango-dark t t)
-  
-  ;; (defun color-theme-for-frame (frame)
-  ;;   (select-frame frame)
-  ;;   (when (not (window-system frame))
-  ;;     (disable-theme 'tango-dark) ; in case it was active
-  ;;     (enable-theme 'tango))
-    
-  ;;   (when (window-system frame)
-  ;;     (disable-theme 'tango) ; in case it was active
-  ;;     (enable-theme 'tango-dark)))
-  
-  ;; ;;(transparency-on)
-  ;; (when (not (display-graphic-p))
-  ;;   (load-library "color-theme-dmb-dark")
-  ;;   (color-theme-dmb-dark))
-  
-  ;; (when (window-system)
-  ;;   (load-library "color-theme--dmb-default3")
-  ;;   (color-theme--dmb-default3))
-  
-  )
-
-;;(load-library "color-theme-twilight")
-;;(color-theme-twilight)
-
-;;(load-library "zenburn")
-;;(color-theme-zenburn)
-
-
 
 (global-hl-line-mode -1)
-
-;; Customize background color of lighlighted line
-;;(set-face-background 'hl-line "#FFE3AB")
-;;(set-face-background 'hl-line "#D85652")
-;;(set-face-background 'hl-line "#CDE1FF")
-;;(set-face-foreground  'hl-line "#000000")
-;;(set-face-background  'hl-line "alice blue")
-
-;; Highlight in yasnippet
-;;(set-face-background 'yas/field-highlight-face "#333399")
-
-;;(set-face-foreground 'font-lock-warning-face "#ff6666")
 
 ;; org-mode colors
 (setq org-todo-keyword-faces
@@ -269,19 +187,7 @@
         ))
 
 (custom-set-variables 
- '(custom-theme-directory (*emacs ".emacs.x/.emacs.d/themes")))
-
-;; (dolist
-;;     (path (directory-files (*emacs ".emacs.x/.emacs.d/themes") t "\\w+"))
-;;   (when (file-directory-p path)
-;;     (add-to-list 'custom-theme-load-path path)))
-
-;; (defun use-default-theme ()
-;;   (interactive)
-;;   (disable-theme 'prez)
-;;   (load-theme 'default-black)
-;;   (when (boundp 'magnars/default-font)
-;;     (set-face-attribute 'default nil :font magnars/default-font)))
+ '(custom-theme-directory (*emacs ".emacs.x/themes")))
 
 
 (provide 'dmb-appearance)

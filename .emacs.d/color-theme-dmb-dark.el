@@ -1,17 +1,18 @@
+(require 'color-theme)
 (defun color-theme-dmb-dark ()
   "Theme by me!"
   (interactive)
   (color-theme-install
    '(color-theme-dmb-dark
-     (;;(background-color . "#0D0000")
+     ((background-color . "color-16")
       ;;(background-color . "#131313")
       ;;(foreground-color . "#FFFFFF")
-      (foreground-color . "#dadada")
+      ;;(foreground-color . "#dadada")
       (background-mode . dark)
       (border-color . "#323232")
-      (cursor-color . "#FFFFFF")
+      ;;(cursor-color . "#FFFFFF")
       (mouse-color . "#323232"))
-     (mode-line ((t (:foreground "#FFFFFF" :background: "" :overline "LightGray" ))))
+     (mode-line ((t (:foreground "#331" :background: "color-16" :overline "LightGray" ))))
      (mode-line-inactive ((t (:foreground "#3a3a3a" :background: nil ))))
      (modeline-buffer-id ((t (:foreground "#5fff87" ))))
      (minibuffer-prompt ((t (:foreground "##00ff87" ))))

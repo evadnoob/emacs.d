@@ -25,7 +25,8 @@
 
 (global-set-key [apps]             'iswitchb-buffer)
 (global-set-key "\M-o"           'other-window)
-(global-set-key [f3]             'simple-grep)
+;;(global-set-key [f3]             'simple-grep)
+(global-set-key [f3]             'ag)
 (global-set-key [f2]             'ack-and-a-half)
 (global-set-key [f4]             'find-dired)
 (global-set-key "\C-c\C-a"       'beginning-of-line)
@@ -105,7 +106,7 @@
 
 
 
-(global-set-key "\C-x 4 j" 'tempo-complete-tag)
+;;(global-set-key "\C-x 4 j" 'tempo-complete-tag)
 
 (global-set-key "\C-c\C-j" 'join-line)
 
@@ -156,7 +157,19 @@
 ;; Should be able to eval-and-replace anywhere.
 (global-set-key (kbd "C-c C-e") 'eval-and-replace)
 
+
+(require 'guide-key)
+(setq guide-key/guide-key-sequence '("C-x r" "C-x 4" "C-x v" "C-x 8"))
+(guide-key-mode 1)  ; Enable guide-key-mode
+(setq guide-key/highlight-command-regexp "rectangle")
+(setq guide-key/idle-delay 0.1)
+(setq guide-key/popup-window-position 'bottom)
+
+(require 'annoying-arrows-mode)
+(annoying-arrows-mode 1)
 (provide 'setup-keybindings)
+
+
 
 
 

@@ -231,4 +231,18 @@
 
 
 (iswitchb-mode 1)
+
+;; setup sensible window splitting defaults for more info see
+;; `split-window-sensibly the following two settings cause
+;; split-window-sensibly to prefer splitting horizontially and avoid
+;; vertical splits.  By setting both to nil, there will always be a
+;; horizontal split, for help, info, grep, pretty much everything
+;; etc.
+(custom-set-variables
+ '(split-height-threshold nil)
+ '(split-width-threshold 450))
+
 (provide 'setup-sensible-defaults)
+
+
+

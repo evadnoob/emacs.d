@@ -102,3 +102,12 @@ url = git://orgmode.org/org-mode.git
 [submodule ".emacs.p/ack-and-a-half"]
 	path = .emacs.p/ack-and-a-half
 	url = https://github.com/jhelwig/ack-and-a-half.git
+[submodule ".emacs.p/scala-mode2"]
+	path = .emacs.p/scala-mode2
+	url = https://github.com/hvesalai/scala-mode2.git
+[submodule ".emacs.p/web-mode"]
+	path = .emacs.p/web-mode
+	url = https://github.com/evadnoob/web-mode.git
+[submodule ".emacs.p/evil"]
+	path = .emacs.p/evil
+	url = git://gitorious.org/evil/evil.git

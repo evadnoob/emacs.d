@@ -1,8 +1,10 @@
-  (when (> emacs-major-version 23)
-        (require 'package)
-        (package-initialize)
-        (add-to-list 'package-archives 
-                     '("melpa" . "http://melpa.milkbox.net/packages/")
-                     'APPEND))
+(when (> emacs-major-version 23)
+  (require 'package)
+  (package-initialize)
+  (add-to-list 'package-archives 
+               '("melpa" . "http://melpa.milkbox.net/packages/")
+               'APPEND))
 
-(provide 'setup-Melba)
+
+(provide 'setup-melpa)
+

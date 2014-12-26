@@ -19,12 +19,11 @@
 (add-to-list 'load-path (*emacs ".emacs.x/.emacs.d"))
 (add-to-list 'load-path (*emacs ".emacs.x/.emacs.p"))
 
-
-;; Reminder to self: replacing dmb-main with more modular setup
-;; files...(load-library "dmb-main.el") (load-library "dmb-var.el")
 (load-library "setup-sensible-defaults")
+;;(load-library "setup-color-theme")
 (load-library "setup-transparency")
 (load-library "setup-appearance")
+(load-library "setup-melpa")
 (load-library "setup-grep")
 (load-library "setup-org-mode")
 (load-library "setup-shell-mode")
@@ -46,11 +45,16 @@
 (load-library "setup-ansi-term")
 (load-library "setup-undo-tree")
 (load-library "setup-python-mode")
-;;(load-library "setup-magit")
+(load-library "setup-magit") ;; failing with latest (HEAD) 
 (load-library "setup-org-mode")
 (load-library "setup-highlight-line-mode")
+(load-library "setup-ack")
+(load-library "setup-scala-mode")
+;;(load-library "setup-flx")
+;;(load-library "setup-god-mode")
+;;(load-library "setup-evil-mode")
+(load-library "setup-ag-mode")
 
-;;brew install emacs --cocoa
 ;;brew install emacs --cocoa --use-git-head --HEAD
 ;; To open it with Alfred or Quicksilver, you have to copy Emacs.app into /Applications instead of the symlink that brew places there.
 

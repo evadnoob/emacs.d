@@ -124,7 +124,7 @@
 
   (notification-center-notify "message" message))
 
-(add-hook 'erc-text-matched-hook 'my-erc-hook)
+;;(add-hook 'erc-text-matched-hook 'my-erc-hook)
 
 (defun send-oper (server nick)
   "If we're on the core server, send the oper command."
