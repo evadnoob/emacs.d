@@ -52,10 +52,10 @@
  '(mode-line-inactive                  ((t (:foreground "#9ca19e"  :background "color-16" :box nil :weight light :inherit (mode-line)   ))))
  '(mode-line                           ((t (:foreground "grey60"  :background "color-16" :box nil )))) ;; #c5c8c6
 
- '(isearch                             ((t (:foreground "#99ccee"  :background "#444444"                                               ))))
- '(isearch-fail                        ((t (                       :background "#ffaaaa"                                               ))))
- '(lazy-highlight                      ((t (                       :background "#77bbdd"                                               ))))
- '(match                               ((t (                       :background "#3388cc"                                               ))))
+ '(isearch                             ((t (:foreground "#99ccee"  :background "#444444" ))))
+ '(isearch-fail                        ((t (                       :background "#ffaaaa" ))))
+ '(lazy-highlight                      ((t (                       :background "#77bbdd" :foreground "black" ))))
+ '(match                               ((t (                       :background "#3388cc" ))))
 
  '(tooltip                             ((t (:foreground "black"    :background "LightYellow" :inherit (variable-pitch)                 ))))
 
@@ -88,8 +88,9 @@
  '(diff-changed                        ((t (:foreground "#3388cc"))))
  '(diff-hunk-header                    ((t (:background "#242130"))))
 
+ '(which-func                          ((t (:foreground "green" :bold nil))))
 
- '(font-lock-comment-face ((t (:foreground "#4f6d82"  ))))
+ '(font-lock-comment-face ((t (:foreground "grey55"  ))))
  '(font-lock-variable-name-face ((t (:foreground "#abfdd8"  ))))
  '(font-lock-builtin-face ((t (:foreground "#98a6dd"  ))))
  '(font-lock-type-face ((t (:foreground "#efabec"  ))))

@@ -1,116 +1,113 @@
 
 [submodule "change-inner.el"]
-path = .emacs.p/change-inner.el
+path = emacs.p/change-inner.el
 url = https://github.com/magnars/change-inner.el.git
 
 [submodule "js3-mode"]
-path = .emacs.p/js3-mode
+path = emacs.p/js3-mode
 url = https://github.com/thomblake/js3-mode.git
 
 [submodule "js2-mode"]
-path = .emacs.p/js2-mode
+path = emacs.p/js2-mode
 url = https://github.com/mooz/js2-mode.git
 
 [submodule "helm"]
-path = .emacs.p/helm
+path = emacs.p/helm
 url = https://github.com/emacs-helm/helm.git
 
 [submodule "expand-region"]
-path = .emacs.p/expand-region.el
+path = emacs.p/expand-region.el
 url = https://github.com/magnars/expand-region.el.git
 
 [submodule "yasnippet"]
-path = .emacs.p/yasnippet
+path = emacs.p/yasnippet
 url = https://github.com/capitaomorte/yasnippet.git
 
 [submodule "less-css-mode"]
-path = .emacs.p/less-css-mode
+path = emacs.p/less-css-mode
 url = https://github.com/purcell/less-css-mode.git
 
 [submodule "slime"]
-path = .emacs.p/slime
+path = emacs.p/slime
 url = https://github.com/antifuchs/slime.git
 
 [submodule "swank-js"]
-path = .emacs.p/swank-js
+path = emacs.p/swank-js
 url = https://github.com/swank-js/swank-js.git 
 
 [submodule "mark-multiple"]
-path = .emacs.p/mark-multiple.el
+path = emacs.p/mark-multiple.el
 url = https://github.com/magnars/mark-multiple.el.git
 
 [submodule "full-ack"]
-path = .emacs.p/full-ack
+path = emacs.p/full-ack
 url = https://github.com/nschum/full-ack.git
 
 [submodule "jshint-mode"]
-path = .emacs.p/jshint-mode
+path = emacs.p/jshint-mode
 url = https://github.com/daleharvey/jshint-mode.git
 
 [submodule "malabar-mode"]
-path = .emacs.p/malabar-mode
+path = emacs.p/malabar-mode
 url = http://github.com/espenhw/malabar-mode.git
 
 
 [submodule "emacs-soothe-theme"]
-path = .emacs.p/emacs-soothe-theme
+path = emacs.p/emacs-soothe-theme
 url = https://github.com/evadnoob/emacs-soothe-theme.git
 
 [submodule "s.el"]
-path = .emacs.p/s.el
+path = emacs.p/s.el
 url = https://github.com/magnars/s.el.git
 
 [submodule "undo-tree.el"]
-path = .emacs.p/undo-tree
+path = emacs.p/undo-tree
 url = http://www.dr-qubit.org/git/undo-tree.git
 
 [submodule "markdown-mode"]
-path = .emacs.p/markdown-mode
+path = emacs.p/markdown-mode
 url = git://jblevins.org/git/markdown-mode.git
 
 [submodule "python-mode"]
-path = .emacs.p/python-mode
+path = emacs.p/python-mode
 url = https://github.com/emacsmirror/python-mode.git
 
 [submodule "org-mode"]
-path = .emacs.p/org-mode
+path = emacs.p/org-mode
 url = git://orgmode.org/org-mode.git
-[submodule ".emacs.p/nyan-mode"]
-	path = .emacs.p/nyan-mode
+[submodule "emacs.p/nyan-mode"]
+	path = emacs.p/nyan-mode
 	url = https://github.com/TeMPOraL/nyan-mode
-[submodule ".emacs.p/emacs-jabber"]
-	path = .emacs.p/emacs-jabber
+[submodule "emacs.p/emacs-jabber"]
+	path = emacs.p/emacs-jabber
 	url = https://github.com/demyanrogozhin/emacs-jabber.git
-[submodule ".emacs.p/color-theme-sunburst"]
-	path = .emacs.p/color-theme-sunburst
+[submodule "emacs.p/color-theme-sunburst"]
+	path = emacs.p/color-theme-sunburst
 	url = https://github.com/neomantic/Emacs-Sunburst-Color-Theme.git
-[submodule ".emacs.p/flymake-less"]
-	path = .emacs.p/flymake-less
+[submodule "emacs.p/flymake-less"]
+	path = emacs.p/flymake-less
 	url = https://github.com/purcell/flymake-less.git
-[submodule ".emacs.p/pbcopy.el"]
-	path = .emacs.p/pbcopy.el
+[submodule "emacs.p/pbcopy.el"]
+	path = emacs.p/pbcopy.el
 	url = https://github.com/jkp/pbcopy.el.git
-[submodule ".emacs.p/smart-forward.el"]
-	path = .emacs.p/smart-forward.el
+[submodule "emacs.p/smart-forward.el"]
+	path = emacs.p/smart-forward.el
 	url = https://github.com/magnars/smart-forward.el.git
-[submodule ".emacs.p/tmux-MacOSX-pasteboard"]
-	path = .emacs.p/tmux-MacOSX-pasteboard
+[submodule "emacs.p/tmux-MacOSX-pasteboard"]
+	path = emacs.p/tmux-MacOSX-pasteboard
 	url = https://github.com/ChrisJohnsen/tmux-MacOSX-pasteboard.git
-[submodule ".emacs.p/flymake-easy"]
-	path = .emacs.p/flymake-easy
+[submodule "emacs.p/flymake-easy"]
+	path = emacs.p/flymake-easy
 	url = https://github.com/purcell/flymake-easy.git
-[submodule ".emacs.p/ack-and-a-half"]
-	path = .emacs.p/ack-and-a-half
-	url = https://github.com/jhelwig/ack-and-a-half.git
-[submodule ".emacs.p/scala-mode2"]
-	path = .emacs.p/scala-mode2
+[submodule "emacs.p/scala-mode2"]
+	path = emacs.p/scala-mode2
 	url = https://github.com/hvesalai/scala-mode2.git
-[submodule ".emacs.p/web-mode"]
-	path = .emacs.p/web-mode
+[submodule "emacs.p/web-mode"]
+	path = emacs.p/web-mode
 	url = https://github.com/evadnoob/web-mode.git
-[submodule ".emacs.p/evil"]
-	path = .emacs.p/evil
+[submodule "emacs.p/evil"]
+	path = emacs.p/evil
 	url = git://gitorious.org/evil/evil.git
-[submodule ".emacs.p/ensime"]
-	path = .emacs.p/ensime
+[submodule "emacs.p/ensime"]
+	path = emacs.p/ensime
 	url = https://github.com/aemoncannon/ensime.git
